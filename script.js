@@ -50,3 +50,51 @@ let a = 5,
 
     console.log(newNumbers);
     console.log(numbers);
+
+    const add = {
+        d: 17,
+        e: 20
+    };
+const clone = Object.assign({}, add);//метод = закинуть обьект в обьект,в пустой или в существующий,при этом он независимый
+
+clone.d = 20;
+
+/* console.log(add);
+console.log(clone);
+ */
+
+const oldArray = ['a', 'b', 'c'];
+const newArray = oldArray.slice();  //создает обособленную копию
+newArray[1] = 'dsdsdsdsd';
+console.log(newArray);
+console.log(oldArray);
+
+const video = ['youtube', 'vimeo', 'rutbe'],
+        blogs = ['wordpress', 'livejournal', 'blogger'],
+
+        internet = [...video, ...blogs, 'vk', 'facebook'];//склейка массивов в один
+
+        console.log(internet);
+
+        function log(a, b, c) {
+            console.log(a);
+            console.log(b);
+            console.log(c);
+
+        }
+
+        const num = [2, 5, 7];
+
+        log(...num);//спред оператор
+
+
+        const array = ["a", "b"];
+
+        const newAarray = [...array];
+
+        const q = {
+            one: 1,
+            two: 2
+        };
+
+        const newObj = {...q};
