@@ -1,40 +1,52 @@
 'use strict';
 
-const arr = [1, 432, 13, 726, 48];
-arr.sort(compare);
-console.log(arr);
+let a = 5,
+    b = a;
 
-function compare(a, b) {
-    return a - b;
-}
-/* arr[99] = 0;
-console.log(arr.length);
-console.log(arr);
-/* последний индекс +1 */
-/*  arr.forEach(function(item, i, arr) {
-    console.log(`${i}: ${item} внутри массива ${arr}`);
- }); */
-/* arr.pop(); */
-/* arr.push(10);
-console.log(arr); */
+    b = b + 5;
+
+    console.log(b);
+    console.log(a);
+
+
+    const obj = {
+        a: 5,
+        b: 1
+    };
 /* 
-for (let i = 0; i < arr.length; i++) {
-    console.log(arr[i]);
-} 
+    const copy = obj; // Ссылка
 
-for (let value of arr) {
-    console.log(value);
-} */
+    copy.a = 10;
 
+    console.log(copy);
+    console.log(obj); */
 
-/* const str = prompt("", "");
-const products = str.split(", ");
-products.sort();
-console.log(products.join('; ')); */сортировка
+    function copy(mainObj) {
+        let objCopy = {};
 
 
+        let key;
 
+        for (key in mainObj) {
+            objCopy[key] = mainObj[key];
+        }
 
+        return objCopy; //Чтобы можно было с ним работать
+    }
 
+    const numbers = {
+        a: 2,
+        b: 5,
+        c: {
+            x: 7,
+            y: 4
+        }
+    };
 
-Методы сортировки для массивов
+    const newNumbers = copy(numbers); //передаем в функцию аргумента массива(любого)
+
+    newNumbers.a = 10;
+    newNumbers.c.x = 10;
+
+    console.log(newNumbers);
+    console.log(numbers);
