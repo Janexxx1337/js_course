@@ -1,33 +1,40 @@
 'use strict';
 
+const arr = [1, 432, 13, 726, 48];
+arr.sort(compare);
+console.log(arr);
+
+function compare(a, b) {
+    return a - b;
+}
+/* arr[99] = 0;
+console.log(arr.length);
+console.log(arr);
+/* последний индекс +1 */
+/*  arr.forEach(function(item, i, arr) {
+    console.log(`${i}: ${item} внутри массива ${arr}`);
+ }); */
+/* arr.pop(); */
+/* arr.push(10);
+console.log(arr); */
+/* 
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
+} 
+
+for (let value of arr) {
+    console.log(value);
+} */
 
 
-const options = {
- name: 'test',
- width: 1024,
- height: 1024,
- mentor: "garryyyy",
- mentor: "larryyyy",
- mentor: "parryyyy",
- colors: {
-     border: 'black',
-     bg: 'red'
- },
-
- skills: {
-     Garry: "Truman"
- },
-
- makeTest: function() {
-     console.log('test');
- }
-};
-
-options.makeTest();
-
-console.log(Object.keys(options).length);
+/* const str = prompt("", "");
+const products = str.split(", ");
+products.sort();
+console.log(products.join('; ')); */сортировка
 
 
-const { border, bg} = options.colors;
 
-console.log(border);
+
+
+
+Методы сортировки для массивов
