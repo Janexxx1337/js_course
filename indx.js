@@ -1,29 +1,31 @@
-/* const family = ['Peter', 'Ann', 'Alex', 'Linda'];
+"use strict";
 
-function showFamily(arr) {
-        let str = `Семья состоит из: ${arr}`;
+let str = "some";
+let strObj = new String(str);
 
+/* console.log(typeof(str));
+console.log(typeof(strObj)); */
 
+console.dir([1,2,3]);
 
-        str = str.toLowerCase();
+const soldier = {
+        health: 400,
+        armor: 100,
 
-        return str;
-}
+        sayHello: function() {
+                console.log("Hello");
+        }
+};
 
-showFamily(family);
+/* 
+const john = {
+        health: 100
+};
+
  */
 
-const favoriteCities = ['liSBon', 'ROME', 'miLan', 'Dublin'];
+const john = Object.create(soldier); // Создаем обьект, который прототипно наследуется (soldier) !! Важно запомнить
 
-function standardizeStrings(arr) {
-
- let str = `${arr}`;
-
- str = str.toLowerCase();
-
-return str;
-
-}
-
-standardizeStrings(favoriteCities);
-console.log(standardizeStrings(favoriteCities));
+/* Object.setPrototypeOf(john, soldier);  //1 которому назначаем прототип, 2) обьект прототип которого назначаем !! Важно запомнить
+ */
+john.sayHello();
